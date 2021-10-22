@@ -15,4 +15,19 @@ package interface2_6week;
  */
 
 public class Interface_Demo {
+    public static void main(String[] args) {
+        SamsungSmartPhone galaxyUltra = new SamsungSmartPhone("010 8330 2328","SKT","Android");
+        AppleSmartPhone IPhone13 = new AppleSmartPhone("010 1111 2222", "KT");
+        SamsungSmartPhone galaxyA10 = new SamsungSmartPhone("010 1234 5678","LG","타이젠");
+
+        IPhone13.sendMessage("안녕 나는 아이폰 샀어");
+        IPhone13.receiveMessage("뭐샀냐 프로?");
+
+        galaxyUltra.takePicture();
+        System.out.println(galaxyA10.OS);
+        galaxyA10.receiveMessage("오늘 볼수 있어?");
+
+        SMS.deleteAll();
+        IPhone13.deleteBackup();
+    }
 }
